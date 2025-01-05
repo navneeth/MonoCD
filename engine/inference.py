@@ -36,9 +36,9 @@ def compute_on_dataset(model, data_loader, device, predict_folder, timer=None, v
             vis_target = targets[0]
             targets = [target.to(device) for target in targets]
 
-            if vis or vis_all:
-                print('===============================')
-                print('img_ids:{}'.format(image_ids))
+            #if vis or vis_all:
+            print('===============================')
+            print('img_ids:{}'.format(image_ids))
 
             if vis_all:
                 eval_depth_methods = ['soft', 'direct', 'keypoints_center', 'compensated_center']
@@ -100,6 +100,7 @@ def compute_on_dataset(model, data_loader, device, predict_folder, timer=None, v
                 # generate txt files for predicted objects
                 predict_txt = image_ids[0] + '.txt'
                 predict_txt = os.path.join(predict_folder, predict_txt)
+                print('output:{}'.format(output))
                 generate_kitti_3d_detection(output, predict_txt)
 
     if vis_horizon:
