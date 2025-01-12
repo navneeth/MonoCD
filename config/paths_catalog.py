@@ -1,19 +1,19 @@
 import os
 
 class DatasetCatalog():
-    DATA_DIR = "/home/navneeth/autonomous-driving-demo" #"/path/to/your/kitti/"
+    DATA_DIR = "/home/navneeth" #"/path/to/your/kitti/"
     DATASETS = {
         "kitti_train": {
-            "root": "KITTI/training/",
+            "root": "kitti_dataset/training/",
         },
         "kitti_test": {
-            "root": "KITTI/testing/",
+            "root": "kitti_dataset/testing/",
         },
         "zod_train": {
-            "root": "outputs",
+            "root": "autonomous-driving-demo/outputs",
         },
         "zod_test": {
-            "root": "outputs",
+            "root": "autonomous-driving-demo/outputs",
         },
     }
 

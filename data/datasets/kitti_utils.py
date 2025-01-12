@@ -491,6 +491,7 @@ def inverse_rigid_trans(Tr):
 
 
 def read_label(label_filename):
+    #print("label_filename:",label_filename)
     lines = [line.rstrip() for line in open(label_filename)]
     objects = [Object3d(line) for line in lines]
     return objects

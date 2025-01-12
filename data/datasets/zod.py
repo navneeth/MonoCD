@@ -697,8 +697,8 @@ class ZODDataset(Dataset):
 		# Save the image with boxes to disk
 		img3 = show_image_with_boxes(img, cls_ids, target_centers, bboxes.copy(), keypoints, reg_mask, 
 									offset_3D, self.down_ratio, pad_size, orientations, vis=True)
-		img3 = Image.fromarray(img3)
-		img3.save(f"{original_idx}_with_boxes.png")
+		#img3 = Image.fromarray(img3)
+		#img3.save(f"{original_idx}_with_boxes.png")
 
 		# show_heatmap(img, heat_map, index=original_idx)
 		# show_heatmap(img, horizon_heat_map, classes=['horizon'])

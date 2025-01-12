@@ -38,7 +38,7 @@ class KITTIDataset(Dataset):
 		self.root = root
 		self.image_dir = os.path.join(root, "image_2")
 		self.image_right_dir = os.path.join(root, "image_3")
-		self.label_dir = os.path.join(root, "label_2")
+		self.label_dir = os.path.join(root, "label")
 		self.calib_dir = os.path.join(root, "calib")
 		self.planes_dir = os.path.join(root, "planes")
 
