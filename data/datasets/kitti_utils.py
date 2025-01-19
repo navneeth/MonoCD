@@ -491,7 +491,6 @@ def inverse_rigid_trans(Tr):
 
 
 def read_label(label_filename):
-    #print("label_filename:",label_filename)
     lines = [line.rstrip() for line in open(label_filename)]
     objects = [Object3d(line) for line in lines]
     return objects
@@ -1171,7 +1170,7 @@ def show_image_with_boxes(image, cls_ids, target_center, box2d, corners_2d, reg_
 
         alpha_regress = encoded_alphas[idx]
         text = '{} {} {:.1f}'.format(alpha_regress[0], alpha_regress[1], alpha_regress[2] / np.pi * 180)
-        img2_vis.draw_text(text=text, position=(int(box2d[idx, 0]), int(box2d[idx, 1])))
+        # img2_vis.draw_text(text=text, position=(int(box2d[idx, 0]), int(box2d[idx, 1])))
 
         # 8 x 3
         corners_2d_i = (corners_2d[idx][:, :2] + target_center[idx].reshape(1, 2)) * down_ratio
