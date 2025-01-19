@@ -26,6 +26,9 @@ conda activate monocd
 conda install pytorch==1.7.0 torchvision==0.8.0 cudatoolkit=11.0 -c pytorch
 pip install -r requirements.txt
 
+# check the pytorch, cuda versions
+python check_cuda.py 
+
 cd model/backbone/DCNv2
 sh make.sh
 # If the DCNv2 compilation fails, you can replace it with the version from https://github.com/lbin/DCNv2 that matches your PyTorch version, and then try recompiling.
