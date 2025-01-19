@@ -1,19 +1,13 @@
 import os
 
 class DatasetCatalog():
-    DATA_DIR = "/home/navneeth" #"/path/to/your/kitti/"
+    DATA_DIR = "/path/to/your/kitti/"
     DATASETS = {
         "kitti_train": {
-            "root": "kitti_dataset/training/",
+            "root": "KITTI/training/",
         },
         "kitti_test": {
-            "root": "kitti_dataset/testing/",
-        },
-        "zod_train": {
-            "root": "autonomous-driving-demo/outputs",
-        },
-        "zod_test": {
-            "root": "autonomous-driving-demo/outputs",
+            "root": "KITTI/testing/",
         },
     }
 
@@ -27,16 +21,6 @@ class DatasetCatalog():
             )
             return dict(
                 factory="KITTIDataset",
-                args=args,
-            )
-        elif "zod" in name:
-            data_dir = DatasetCatalog.DATA_DIR
-            attrs = DatasetCatalog.DATASETS[name]
-            args = dict(
-                root=os.path.join(data_dir, attrs["root"]),
-            )
-            return dict(
-                factory="ZODDataset",
                 args=args,
             )
         raise RuntimeError("Dataset not available: {}".format(name))
