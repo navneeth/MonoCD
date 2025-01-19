@@ -43,7 +43,7 @@ Please download [KITTI dataset](http://www.cvlibs.net/datasets/kitti/eval_object
   |training/
     |calib/
     |image_2/
-    |label/
+    |label_2/
     |planes/
     |ImageSets/
   |testing/
